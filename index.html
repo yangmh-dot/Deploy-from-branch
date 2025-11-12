@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Life Hack Copy Kit — US Audience</title>
+  <meta name="description" content="Generate hooks, captions, hashtags, and a polished Sora/Synth prompt for high-retention US life-hack shorts."/>
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --card:#121822;
+      --muted:#9fb3c8;
+      --text:#e6eef7;
+      --accent:#60a5fa;
+      --border:#1f2a37;
+      --ok:#34d399;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#0b0f14,#0f1720);color:var(--text);font:16px/1.55 ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial}
+    header{position:sticky;top:0;backdrop-filter:blur(8px);background:#0b0f1480;border-bottom:1px solid var(--border);z-index:2}
+    .wrap{max-width:1100px;margin:0 auto;padding:20px}
+    h1{font-weight:800;letter-spacing:.3px;margin:10px 0 6px}
+    .sub{color:var(--muted);margin:0 0 16px}
+    .toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0 18px}
+    .toolbar button,.toolbar select{background:var(--card);border:1px solid var(--border);color:var(--text);padding:10px 12px;border-radius:12px;cursor:pointer}
+    .toolbar button.primary{background:var(--accent);border-color:transparent;color:#07111f;font-weight:700}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;box-shadow:0 8px 30px #00000030;display:flex;flex-direction:column}
+    .card header{all:unset;display:flex;gap:10px;align-items:center;padding:14px 14px 0}
+    .card h2{font-size:16px;margin:0}
+    .card .content{padding:12px 14px 16px}
+    textarea{width:100%;min-height:220px;resize:vertical;background:#0d131c;border:1px solid var(--border);color:var(--text);border-radius:12px;padding:10px;outline:none}
+    .row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:10px}
+    .pill{background:#0d131c;border:1px dashed var(--border);color:var(--muted);padding:6px 10px;border-radius:999px;font-size:12px}
+    .copy{background:#0d131c;border:1px solid var(--border);padding:8px 10px;border-radius:10px;color:var(--text);cursor:pointer}
+    .copy.ok{border-color:#1f473d;background:#0c1a16;color:#d1fae5}
+    footer{color:var(--muted);text-align:center;padding:18px 0 26px}
+    .note{font-size:12px;color:var(--muted)}
+    .badge{background:#0c1624;border:1px solid var(--border);color:#c7d7ea;border-radius:999px;padding:6px 10px}
+    .success{color:var(--ok);font-weight:700;margin-left:6px;display:none}
+    @media (max-width:900px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>Life Hack Copy Kit <span class="badge">US Audience</span></h1>
+      <p class="sub">3 columns with quick copy — hooks & titles, captions & beats, hashtags & prompt. Optimized for TikTok / Reels / YouTube Shorts.</p>
+      <div class="toolbar">
+        <button id="btnRandom" class="primary">🎲 Random All</button>
+        <button id="btnCopyAll">📋 Copy All</button>
+        <select id="tone">
+          <option value="clean">Clean & Minimal</option>
+          <option value="hype">Hype / Viral</option>
+          <option value="gentle">Gentle & Satisfying</option>
+        </select>
+        <select id="aud">
+          <option value="genz">US Gen‑Z</option>
+          <option value="adult">US 20‑40 Adult</option>
+          <option value="broad">Broad Family‑safe</option>
+        </select>
+        <span class="note">No API keys or backend needed. Safe for GitHub Pages.</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="grid">
+      <section class="card" id="col1">
+        <header><h2>① Hooks & Titles</h2></header>
+        <div class="content">
+          <textarea id="hooks"></textarea>
+          <div class="row">
+            <button class="copy" data-target="hooks">Copy</button>
+            <span class="pill">US slang & life‑hack lingo</span>
+            <span id="ok1" class="success">✓ Copied</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" id="col2">
+        <header><h2>② Captions & Subtitles (0–15s Beats)</h2></header>
+        <div class="content">
+          <textarea id="captions"></textarea>
+          <div class="row">
+            <button class="copy" data-target="captions">Copy</button>
+            <span class="pill">Oddly satisfying • No-scrub • Before/After</span>
+            <span id="ok2" class="success">✓ Copied</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" id="col3">
+        <header><h2>③ Hashtags, SEO, + Sora Prompt</h2></header>
+        <div class="content">
+          <textarea id="tags"></textarea>
+          <div class="row">
+            <button class="copy" data-target="tags">Copy</button>
+            <span class="pill">#CleanTok #LifeHack #SparklingClean</span>
+            <span id="ok3" class="success">✓ Copied</span>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <p class="note" style="margin-top:18px;">Tip: Tweak tone & audience, hit <b>Random All</b>, then copy each column or Copy All for your editor/Notion.</p>
+  </main>
+
+  <footer>
+    Built for high retention & clarity · 9:16 shorts · v1.0
+  </footer>
+
+<script>
+async function loadData(){ 
+  const res = await fetch('./assets/data.json');
+  return await res.json();
+}
+
+function pick(arr){ return arr[Math.floor(Math.random()*arr.length)]; }
+
+function buildHooks(d, tone, aud){
+  const openers = d.openers[tone];
+  const lingo = d.lingo;
+  const claim = pick(d.claims);
+  const set = [
+    `${pick(openers)} ${pick(lingo)} — ${claim}`,
+    `You’ve been cleaning your microwave *wrong*. ${pick(d.cta_soft)}`,
+    `${pick(d.power)} microwave hack. Watch the wipe.`,
+    `No chemicals, no scrubbing — just lemons. ${pick(d.cta_soft)}`,
+    `The 15‑second ${pick(d.power)} trick for a spotless microwave.`
+  ];
+  return set.map((s,i)=> (i+1)+". "+s).join("\n");
+}
+
+function buildCaptions(d){
+  const beats = [
+    "0–3s · Nasty close‑up • clinical light • grime highlights",
+    "3–6s · Glass bowl + water + 3 lemon slices — center of turntable",
+    "6–9s · Door clicks shut • countdown • bowl spins",
+    "9–14s · Steam burst • single wipe = pristine wall • oddly satisfying",
+    "14–15s · Static gleam • tiny lens flare • done"
+  ];
+  const lines = [
+    `So satisfying. ${pick(d.cta_watch)}`,
+    `Like magic, but it’s science (steam + citrus).`,
+    `No scrub. No harsh chemicals. Just lemons + water.`,
+    `Before ➜ After. ${pick(d.cta_save)}`,
+    `Try this today and thank me later.`
+  ];
+  return ["Beats:", ...beats, "", "On‑screen text ideas:", ...lines].join("\n");
+}
+
+function buildTagsAndPrompt(d){
+  const tags = ["#CleanTok","#LifeHack","#CleaningHacks","#Satisfying","#SparklingClean","#MicrowaveHack","#NoScrub","#CitrusHack","#LemonHack","#BeforeAndAfter","#HomeTips"];
+  const seo = ["microwave cleaning","lemon steam hack","no scrub cleaning","kitchen deep clean","oddly satisfying clean","citrus steam"];
+  const prompt = d.prompt_en.trim();
+  const zh = d.prompt_zh.trim();
+  return [
+`Hashtags:
+${tags.join(" ")}
+
+SEO keywords:
+${seo.join(", ")}
+
+Sora/Runway/Pika Prompt (EN, 9:16 · 15s):
+${prompt}
+
+中文製作提示（9:16 · 15 秒）:
+${zh}`].join("\n\n");
+}
+
+function markup(btn, okId){
+  btn.classList.add('ok');
+  document.getElementById(okId).style.display='inline';
+  setTimeout(()=>{
+    btn.classList.remove('ok');
+    document.getElementById(okId).style.display='none';
+  },1200);
+}
+
+(async ()=>{
+  const d = await loadData();
+  const toneSel = document.getElementById('tone');
+  const audSel = document.getElementById('aud');
+
+  function refresh(){
+    const tone = toneSel.value;
+    document.getElementById('hooks').value = buildHooks(d, tone, audSel.value);
+    document.getElementById('captions').value = buildCaptions(d);
+    document.getElementById('tags').value = buildTagsAndPrompt(d);
+  }
+
+  document.getElementById('btnRandom').addEventListener('click', refresh);
+  document.getElementById('btnCopyAll').addEventListener('click', async ()=>{
+    const all = [document.getElementById('hooks').value, document.getElementById('captions').value, document.getElementById('tags').value].join("\n\n---\n\n");
+    await navigator.clipboard.writeText(all);
+    markup(document.getElementById('btnCopyAll'), 'ok1'); // reuse style cue
+  });
+
+  document.querySelectorAll('.copy').forEach((b,i)=>{
+    b.addEventListener('click', async ()=>{
+      const id = b.getAttribute('data-target');
+      await navigator.clipboard.writeText(document.getElementById(id).value);
+      markup(b, 'ok'+(i+1));
+    });
+  });
+
+  toneSel.addEventListener('change', refresh);
+  audSel.addEventListener('change', refresh);
+
+  refresh(); // initial
+})();
+</script>
+</body>
+</html>

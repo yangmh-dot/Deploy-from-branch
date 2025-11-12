@@ -1,0 +1,59 @@
+{
+  "openers": {
+    "clean": [
+      "A simple, satisfying kitchen fix.",
+      "A minimalist microwave reset.",
+      "Clean, fast, effective."
+    ],
+    "hype": [
+      "This microwave hack is a game‑changer!",
+      "Insane lemon trick you need to try.",
+      "Mind‑blowing no‑scrub clean."
+    ],
+    "gentle": [
+      "Oddly satisfying citrus steam.",
+      "Effortless lemon clean, no chemicals.",
+      "Soft, bright, and spotless."
+    ]
+  },
+  "lingo": [
+    "life hack",
+    "cleaning hack",
+    "microwave hack",
+    "genius hack",
+    "next‑level trick",
+    "pro tip",
+    "game changer"
+  ],
+  "claims": [
+    "no scrub, no chemicals",
+    "sparkling clean in minutes",
+    "before → after transformation",
+    "effortless deep clean"
+  ],
+  "power": [
+    "genius",
+    "next‑level",
+    "pro‑grade",
+    "game‑changing"
+  ],
+  "cta_soft": [
+    "Save this for later.",
+    "Try this today.",
+    "Share with a friend who needs this.",
+    "Bookmark for your weekend reset."
+  ],
+  "cta_watch": [
+    "Watch the wipe.",
+    "Don’t blink.",
+    "Wait for it.",
+    "Stay for the after shot."
+  ],
+  "cta_save": [
+    "Save & share.",
+    "Save this cleaning hack.",
+    "Share this with your roommate."
+  ],
+  "prompt_en": "(0-3 seconds) A hyper-realistic, 8K vertical video in a 9:16 aspect ratio. The scene opens with a smooth, cinematic tracking shot, moving slowly across the interior of a dirty microwave. Bright, clinical lighting reveals splatters of old tomato sauce, greasy residue, and caked-on food particles. The background is a modern, minimalist American kitchen (clean white cabinets, marble countertop), contrasting the messy microwave.\n\n(3-6 seconds) A pair of hands with a flawless light-pink manicure enters. With deliberate, graceful movements, they place a small elegant glass bowl filled with clear water and three vibrant yellow lemon slices onto the center of the turntable. Medium-close shot focusing on the clean hands and the natural cleaning solution.\n\n(6-9 seconds) The microwave door clicks shut. Cut to an exterior shot of a sleek stainless-steel microwave. The digital display lights up and counts down as the interior light glows, illuminating the spinning bowl. Exactly 3 seconds.\n\n(9-14 seconds) The door swings open, releasing a satisfying billow of citrus-scented steam toward the camera. The same manicured hand, now holding a crisp white paper towel, reaches in. In one fluid motion, the towel wipes a heavily soiled surface clean, revealing a sparkling white wall beneath—effortless and magical.\n\n(14-15 seconds) Final static shot of the gleaming, spotless interior. A small lens flare glints off the surface. End on satisfaction and ultimate cleanliness.\n\nOverall directives: 9:16 vertical, 15s duration, bright minimalist high-end aesthetic, hyper-realistic 8K, airy studio lighting, fast instructional editing with sharp, satisfying cuts, mood: satisfying, effortless, magical cleaning hack.",
+  "prompt_zh": "（0–3 秒）超寫實 8K 直式（9:16）。以電影級滑順推軌運鏡，緩慢掠過骯髒微波爐內部。明亮、臨床感燈光揭露乾掉番茄醬飛濺、油膩殘留、結塊食物。背景是現代極簡美式廚房（白色櫥櫃、大理石檯面），與髒亂內部形成對比。\n\n（3–6 秒）一雙塗淡粉色指甲的手進入畫面。以優雅動作將一個裝清水與三片鮮黃檸檬的精緻玻璃碗放在轉盤中央。中近景，聚焦於乾淨雙手與自然清潔法。\n\n（6–9 秒）門輕扣關閉。切到不鏽鋼微波爐外觀；數位顯示亮起倒數，內燈照亮旋轉的玻璃碗。恰 3 秒。\n\n（9–14 秒）門一開，帶檸檬香的水蒸氣撲面而來。相同的手持一張潔白紙巾伸入，一抹之間，重污瞬間去除，露出閃亮潔白內壁——毫不費力、宛如魔法。\n\n（14–15 秒）最後靜止鏡頭：內部潔淨發亮，小小鏡頭光暈一閃。結尾留給極度滿足與潔淨感。\n\n整體指令：9:16 直式、15 秒，明亮極簡高質感，美術超寫實 8K，通透棚燈；節奏明快的教學剪輯、銳利滿足的切換；氛圍：療癒、輕鬆、如魔法般的清潔祕訣。"
+}
